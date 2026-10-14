@@ -1,0 +1,735 @@
+{
+  "version": 1,
+  "description": "Published, source-backed trivia. Selection is local; this is not live AI generation.",
+  "facts": [
+    {
+      "id": "venus-day",
+      "topic": "Space",
+      "title": "A year before a full turn.",
+      "text": "One Venus rotation takes 243 Earth days, while its orbit around the Sun completes in 225 Earth days. A full rotation takes longer than its year.",
+      "tags": [
+        "venus",
+        "rotation",
+        "day",
+        "year",
+        "time"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Venus facts",
+        "url": "https://science.nasa.gov/venus/venus-facts/"
+      },
+      "evidence": "One Venus rotation takes 243 Earth days; one orbit takes 225 Earth days.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "Ollama llama3.2:latest draft, edited and checked against NASA before publication"
+    },
+    {
+      "id": "venus-sunrise",
+      "topic": "Space",
+      "title": "Sunrise goes the other way.",
+      "text": "On Venus, the Sun would rise in the west and set in the east. The planet rotates in the opposite direction to Earth.",
+      "tags": [
+        "venus",
+        "sunrise",
+        "rotation",
+        "west",
+        "east"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Venus facts",
+        "url": "https://science.nasa.gov/venus/venus-facts/"
+      },
+      "evidence": "Venus rotates backward relative to Earth, so the Sun rises in the west and sets in the east.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "venus-heat",
+      "topic": "Space",
+      "title": "The hottest planet isn’t the closest.",
+      "text": "Venus is hotter than Mercury even though it is farther from the Sun. Its thick atmosphere traps heat through a runaway greenhouse effect.",
+      "tags": [
+        "venus",
+        "mercury",
+        "heat",
+        "hot",
+        "atmosphere",
+        "greenhouse"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Venus facts",
+        "url": "https://science.nasa.gov/venus/venus-facts/"
+      },
+      "evidence": "Venus is the hottest planet; its thick atmosphere traps heat through a runaway greenhouse effect.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "uranus-tilt",
+      "topic": "Space",
+      "title": "A planet that rolls on its side.",
+      "text": "Uranus has an axial tilt of about 98 degrees. Its unusual orientation means one pole can spend roughly 21 Earth years in a dark winter.",
+      "tags": [
+        "uranus",
+        "tilt",
+        "seasons",
+        "winter",
+        "planet"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Uranus facts",
+        "url": "https://science.nasa.gov/uranus/facts/"
+      },
+      "evidence": "Uranus has a 97.77-degree tilt; one half experiences a 21-year-long dark winter.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "uranus-color",
+      "topic": "Space",
+      "title": "A little methane, a lot of color.",
+      "text": "Methane in Uranus’s atmosphere absorbs red light. That helps give the planet its blue-green appearance.",
+      "tags": [
+        "uranus",
+        "blue",
+        "green",
+        "color",
+        "methane",
+        "atmosphere"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Uranus facts",
+        "url": "https://science.nasa.gov/uranus/facts/"
+      },
+      "evidence": "Methane absorbs the red portion of sunlight, producing Uranus’s blue-green color.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "mars-rust",
+      "topic": "Space",
+      "title": "Mars is wearing rust.",
+      "text": "Mars looks red because iron minerals in its rocks and dust oxidize. The familiar color of the Red Planet comes from rust.",
+      "tags": [
+        "mars",
+        "red",
+        "rust",
+        "iron",
+        "color",
+        "rocks"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Mars facts",
+        "url": "https://science.nasa.gov/mars/facts/"
+      },
+      "evidence": "Oxidized iron in Martian rocks, soil, and dust makes Mars appear red.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "mars-volcano",
+      "topic": "Space",
+      "title": "The solar system’s biggest volcano.",
+      "text": "Olympus Mons on Mars is the largest volcano in our solar system. Its enormous base covers an area comparable to the US state of Arizona.",
+      "tags": [
+        "mars",
+        "volcano",
+        "olympus",
+        "mons",
+        "mountain",
+        "geology"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Mars facts",
+        "url": "https://science.nasa.gov/mars/facts/"
+      },
+      "evidence": "Olympus Mons is the largest solar-system volcano, with a base roughly the area of Arizona.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "mars-moons",
+      "topic": "Space",
+      "title": "Potato-shaped moons.",
+      "text": "Mars’s two small moons, Phobos and Deimos, are irregular rather than round. They have too little mass for gravity to pull them into spheres.",
+      "tags": [
+        "mars",
+        "moons",
+        "moon",
+        "phobos",
+        "deimos",
+        "gravity",
+        "potato"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Mars facts",
+        "url": "https://science.nasa.gov/mars/facts/"
+      },
+      "evidence": "Phobos and Deimos have too little mass for gravity to make them spherical.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "mars-day",
+      "topic": "Space",
+      "title": "A Martian day has its own name.",
+      "text": "A day on Mars is called a sol and lasts about 24.6 hours. Its day is close to ours, but a Martian year lasts about 687 Earth days.",
+      "tags": [
+        "mars",
+        "day",
+        "sol",
+        "year",
+        "time"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Mars facts",
+        "url": "https://science.nasa.gov/mars/facts/"
+      },
+      "evidence": "Mars rotates every 24.6 hours; its year equals 687 Earth days, and its days are called sols.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "saturn-density",
+      "topic": "Space",
+      "title": "A giant with surprisingly low density.",
+      "text": "Saturn is the only planet in our solar system whose average density is lower than water’s. The familiar “floating planet” idea is a comparison of densities, not a real experiment.",
+      "tags": [
+        "saturn",
+        "density",
+        "water",
+        "float",
+        "physics"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Saturn facts",
+        "url": "https://science.nasa.gov/saturn/facts/"
+      },
+      "evidence": "Saturn alone among solar-system planets has an average density below water.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "saturn-rings",
+      "topic": "Space",
+      "title": "Those rings aren’t solid hoops.",
+      "text": "Saturn’s rings consist of billions of pieces of ice and rock. Many are tiny grains, while some particles are as large as mountains.",
+      "tags": [
+        "saturn",
+        "rings",
+        "ice",
+        "rock",
+        "particles"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Saturn facts",
+        "url": "https://science.nasa.gov/saturn/facts/"
+      },
+      "evidence": "Saturn’s rings contain billions of ice and rock pieces, from grains to mountain-sized particles.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "mercury-temperature",
+      "topic": "Space",
+      "title": "A scorching day, a freezing night.",
+      "text": "Mercury’s surface can reach about 430°C by day and fall to around −180°C at night. It has no substantial atmosphere to hold onto the daytime heat.",
+      "tags": [
+        "mercury",
+        "temperature",
+        "hot",
+        "cold",
+        "day",
+        "night",
+        "atmosphere"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Mercury facts",
+        "url": "https://science.nasa.gov/mercury/facts/"
+      },
+      "evidence": "Mercury reaches about 430°C by day and −180°C at night, lacking an atmosphere that retains heat.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "neptune-wind",
+      "topic": "Space",
+      "title": "Wind faster than a jetliner.",
+      "text": "Neptune’s winds can exceed 2,000 kilometers per hour. Even far from the Sun, this planet has the fastest winds in our solar system.",
+      "tags": [
+        "neptune",
+        "wind",
+        "winds",
+        "weather",
+        "storms",
+        "speed"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Neptune facts",
+        "url": "https://science.nasa.gov/neptune/neptune-facts/"
+      },
+      "evidence": "Neptune is the windiest solar-system planet, with winds exceeding 2,000 km/h.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "neptune-year",
+      "topic": "Space",
+      "title": "One orbit takes generations.",
+      "text": "Neptune takes about 165 Earth years to orbit the Sun. In 2011 it completed its first orbit since its discovery in 1846.",
+      "tags": [
+        "neptune",
+        "year",
+        "orbit",
+        "time",
+        "discovery",
+        "history"
+      ],
+      "source": {
+        "publisher": "NASA",
+        "title": "Neptune facts",
+        "url": "https://science.nasa.gov/neptune/neptune-facts/"
+      },
+      "evidence": "Neptune completed its first 165-year orbit since its 1846 discovery in 2011.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "octopus-hearts",
+      "topic": "Animals",
+      "title": "Three hearts, one octopus.",
+      "text": "An octopus has three hearts. Two move blood through the gills, while the third pumps oxygenated blood to the rest of its body.",
+      "tags": [
+        "octopus",
+        "hearts",
+        "heart",
+        "squid",
+        "cuttlefish",
+        "blood",
+        "ocean",
+        "biology"
+      ],
+      "source": {
+        "publisher": "Smithsonian Ocean",
+        "title": "Cephalopods: Octopus, Squid, Cuttlefish, and Nautilus",
+        "url": "https://ocean.si.edu/ocean-life/invertebrates/octopuses-squids-and-relatives"
+      },
+      "evidence": "Two branchial hearts move blood through the gills; a systemic heart circulates oxygenated blood through the body.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "octopus-blood",
+      "topic": "Animals",
+      "title": "Blue blood without the royalty.",
+      "text": "Octopuses use a copper-based molecule called hemocyanin to transport oxygen. Their blood is blue, unlike our iron-based red blood.",
+      "tags": [
+        "octopus",
+        "blood",
+        "blue",
+        "copper",
+        "hemocyanin",
+        "squid",
+        "oxygen",
+        "ocean",
+        "biology"
+      ],
+      "source": {
+        "publisher": "Smithsonian Ocean",
+        "title": "Cephalopods: Octopus, Squid, Cuttlefish, and Nautilus",
+        "url": "https://ocean.si.edu/ocean-life/invertebrates/octopuses-squids-and-relatives"
+      },
+      "evidence": "Cephalopod blood is blue and transports oxygen using copper-based hemocyanin.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "mimic-octopus",
+      "topic": "Animals",
+      "title": "An underwater impersonator.",
+      "text": "The mimic octopus can change both its appearance and its movements to resemble other sea creatures, including flounders, lionfish, and sea snakes.",
+      "tags": [
+        "octopus",
+        "mimic",
+        "camouflage",
+        "animals",
+        "snake",
+        "lionfish",
+        "ocean"
+      ],
+      "source": {
+        "publisher": "Smithsonian Ocean",
+        "title": "How Octopuses and Squids Change Color",
+        "url": "https://ocean.si.edu/ocean-life/invertebrates/how-octopuses-and-squids-change-color"
+      },
+      "evidence": "The mimic octopus changes skin color and movement to imitate species including flounders, lionfish, and sea snakes.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "ocean-oxygen",
+      "topic": "Ocean",
+      "title": "Tiny ocean life, enormous oxygen production.",
+      "text": "Scientists estimate that ocean organisms produce roughly half of Earth’s oxygen. Much of that production comes from plankton; marine life also consumes roughly as much oxygen as the ocean produces.",
+      "tags": [
+        "ocean",
+        "oxygen",
+        "plankton",
+        "photosynthesis",
+        "algae",
+        "nature",
+        "biology"
+      ],
+      "source": {
+        "publisher": "NOAA",
+        "title": "How much oxygen comes from the ocean?",
+        "url": "https://oceanservice.noaa.gov/facts/ocean-oxygen.html"
+      },
+      "evidence": "Roughly half of oxygen production occurs in the ocean, largely from plankton; marine life consumes about as much.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "ocean-twilight",
+      "topic": "Ocean",
+      "title": "The ocean has a twilight zone.",
+      "text": "The layer about 200 to 1,000 meters below the ocean’s surface is called the twilight zone. There is some light, but too little for photosynthesis.",
+      "tags": [
+        "ocean",
+        "depth",
+        "deep",
+        "light",
+        "twilight",
+        "photosynthesis"
+      ],
+      "source": {
+        "publisher": "NOAA",
+        "title": "How far does light travel in the ocean?",
+        "url": "https://oceanservice.noaa.gov/facts/light_travel.html"
+      },
+      "evidence": "The dysphotic or twilight zone extends from 200 to 1,000 meters; its light is insufficient for photosynthesis.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "ocean-darkness",
+      "topic": "Ocean",
+      "title": "Sunlight has a depth limit.",
+      "text": "Below about 1,000 meters, sunlight does not penetrate the ocean. This sunless region is called the aphotic zone.",
+      "tags": [
+        "ocean",
+        "deep",
+        "depth",
+        "darkness",
+        "light",
+        "sunlight"
+      ],
+      "source": {
+        "publisher": "NOAA",
+        "title": "How far does light travel in the ocean?",
+        "url": "https://oceanservice.noaa.gov/facts/light_travel.html"
+      },
+      "evidence": "The aphotic zone below 1,000 meters receives no penetrating sunlight.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "ocean-salt",
+      "topic": "Ocean",
+      "title": "The sea gets salt from land.",
+      "text": "Rainwater slowly erodes rocks, releasing dissolved ions that rivers carry into the ocean. Seafloor openings and volcanic activity also add salts.",
+      "tags": [
+        "ocean",
+        "salty",
+        "salt",
+        "sea",
+        "rivers",
+        "rocks",
+        "chemistry",
+        "geology"
+      ],
+      "source": {
+        "publisher": "NOAA",
+        "title": "Why is the ocean salty?",
+        "url": "https://oceanservice.noaa.gov/facts/whysalty.html"
+      },
+      "evidence": "Ocean salts come from weathered land rocks and seafloor sources, including hydrothermal and volcanic activity.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "ocean-salinity",
+      "topic": "Ocean",
+      "title": "Seawater has a measurable recipe.",
+      "text": "On average, dissolved salts make up about 3.5% of seawater’s weight. That amount varies with processes such as evaporation and rainfall.",
+      "tags": [
+        "ocean",
+        "sea",
+        "seawater",
+        "salt",
+        "salinity",
+        "chemistry",
+        "water"
+      ],
+      "source": {
+        "publisher": "NOAA",
+        "title": "Why is the ocean salty?",
+        "url": "https://oceanservice.noaa.gov/facts/whysalty.html"
+      },
+      "evidence": "Average seawater salinity is about 35 parts per thousand by weight, varying with evaporation and precipitation.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "ocean-blue",
+      "topic": "Ocean",
+      "title": "Water filters the light.",
+      "text": "Ocean water absorbs light from the red part of the spectrum, leaving more blue light visible. Floating particles can also give the water green, red, or other hues.",
+      "tags": [
+        "ocean",
+        "blue",
+        "color",
+        "water",
+        "light",
+        "physics"
+      ],
+      "source": {
+        "publisher": "NOAA",
+        "title": "Why is the ocean blue?",
+        "url": "https://oceanservice.noaa.gov/facts/oceanblue.html"
+      },
+      "evidence": "Water absorbs red wavelengths; sediments and particles can modify the ocean’s visible color.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "redwood-height",
+      "topic": "Nature",
+      "title": "A living tower, more than 100 meters tall.",
+      "text": "Coast redwoods can grow more than 350 feet tall. They are the world’s tallest tree species.",
+      "tags": [
+        "redwood",
+        "trees",
+        "tree",
+        "forest",
+        "tall",
+        "plants",
+        "biology"
+      ],
+      "source": {
+        "publisher": "National Park Service",
+        "title": "Coast Redwood",
+        "url": "https://home.nps.gov/articles/000/coast-redwood.htm"
+      },
+      "evidence": "Coast redwoods exceed 350 feet in height and are the tallest trees.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "redwood-age",
+      "topic": "Nature",
+      "title": "Some redwoods were seedlings two millennia ago.",
+      "text": "Coast redwoods can live for around 2,000 years. Their extraordinary lifespan accompanies their extraordinary height.",
+      "tags": [
+        "redwood",
+        "trees",
+        "tree",
+        "forest",
+        "age",
+        "old",
+        "nature"
+      ],
+      "source": {
+        "publisher": "National Park Service",
+        "title": "Coast Redwood",
+        "url": "https://home.nps.gov/articles/000/coast-redwood.htm"
+      },
+      "evidence": "Some of the oldest living coast redwoods were seedlings 2,000 years ago.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "sequoia-volume",
+      "topic": "Nature",
+      "title": "An enormous tree, measured by volume.",
+      "text": "The General Sherman Tree is the world?s largest tree by volume. This giant sequoia contains roughly 1,487 cubic meters of wood in its trunk.",
+      "tags": [
+        "sequoia",
+        "general",
+        "sherman",
+        "trees",
+        "tree",
+        "forest",
+        "volume",
+        "largest",
+        "nature"
+      ],
+      "source": {
+        "publisher": "National Park Service",
+        "title": "The Largest Trees in the World",
+        "url": "https://home.nps.gov/seki/learn/nature/largest-trees-in-world.htm"
+      },
+      "evidence": "The General Sherman Tree is the largest tree by volume, measured at 1,487 cubic meters.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "banana-berry",
+      "topic": "Food",
+      "title": "A banana is a berry in botany.",
+      "text": "Botanical categories do not always match kitchen labels. A banana fruit is classified as a berry.",
+      "tags": [
+        "banana",
+        "fruit",
+        "berry",
+        "food",
+        "botany",
+        "plants",
+        "nature"
+      ],
+      "source": {
+        "publisher": "Royal Botanic Gardens, Kew",
+        "title": "Musa itinerans — general information",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:584951-1/general-information"
+      },
+      "evidence": "Kew describes banana fruit as a berry in botanical terminology.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "vanilla-orchid",
+      "topic": "Food",
+      "title": "Vanilla comes from an orchid.",
+      "text": "Vanilla planifolia is an orchid and a source of natural vanilla. The vanilla orchid at Kew is hand-pollinated to produce pods.",
+      "tags": [
+        "vanilla",
+        "orchid",
+        "food",
+        "plants",
+        "spice",
+        "flower",
+        "nature"
+      ],
+      "source": {
+        "publisher": "Royal Botanic Gardens, Kew",
+        "title": "Vanilla planifolia — general information",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262578-2/general-information"
+      },
+      "evidence": "Vanilla planifolia supplies vanilla; Kew hand-pollinates its vanilla orchid to produce pods.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "atomic-clock",
+      "topic": "Technology",
+      "title": "An atom can keep the beat.",
+      "text": "Atomic clocks keep time using frequencies associated with atoms. The first atomic clock was built in 1949 at the institution now known as NIST.",
+      "tags": [
+        "atomic",
+        "clock",
+        "clocks",
+        "time",
+        "science",
+        "physics",
+        "technology"
+      ],
+      "source": {
+        "publisher": "NIST",
+        "title": "How Do Atomic Clocks Work?",
+        "url": "https://www.nist.gov/atomic-clocks/how-do-atomic-clocks-work"
+      },
+      "evidence": "The first atomic clock was invented in 1949 by National Bureau of Standards scientists.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "gps-clocks",
+      "topic": "Technology",
+      "title": "Your navigation depends on timekeeping in space.",
+      "text": "Every GPS satellite carries multiple atomic clocks. Their precise timing data is part of what makes satellite navigation possible.",
+      "tags": [
+        "gps",
+        "satellite",
+        "navigation",
+        "map",
+        "clock",
+        "clocks",
+        "atomic",
+        "time",
+        "technology",
+        "space"
+      ],
+      "source": {
+        "publisher": "GPS.gov",
+        "title": "GPS and Telling Time",
+        "url": "https://www.gps.gov/gps-and-telling-time"
+      },
+      "evidence": "Each GPS satellite has multiple atomic clocks supplying precise time data to GPS signals.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "computer-moth",
+      "topic": "History",
+      "title": "One computer bug really was a bug.",
+      "text": "In 1947, engineers working on Harvard’s Mark II computer found a moth inside a component. They taped the insect into their logbook, which is now in the Smithsonian’s collection.",
+      "tags": [
+        "computer",
+        "bug",
+        "moth",
+        "harvard",
+        "mark",
+        "technology",
+        "computing",
+        "history",
+        "insect"
+      ],
+      "source": {
+        "publisher": "Smithsonian National Museum of American History",
+        "title": "Log Book With Computer Bug",
+        "url": "https://americanhistory.si.edu/collections/object/nmah_334663"
+      },
+      "evidence": "Mark II engineers found a moth in a component in 1947 and taped it into their logbook.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    },
+    {
+      "id": "rosetta-scripts",
+      "topic": "History",
+      "title": "One decree, three scripts.",
+      "text": "The Rosetta Stone carries the same decree in hieroglyphic, demotic, and Greek writing. These parallel inscriptions helped scholars decipher Egyptian hieroglyphs.",
+      "tags": [
+        "rosetta",
+        "stone",
+        "egypt",
+        "egyptian",
+        "greek",
+        "language",
+        "writing",
+        "scripts",
+        "archaeology",
+        "history"
+      ],
+      "source": {
+        "publisher": "British Museum",
+        "title": "The Rosetta Stone",
+        "url": "https://www.britishmuseum.org/collection/object/Y_EA24"
+      },
+      "evidence": "The decree appears in hieroglyphic, demotic, and Greek scripts; the parallel text aided decipherment.",
+      "reviewedAt": "2026-10-14",
+      "authorship": "AI-assisted editorial draft; source checked before publication"
+    }
+  ]
+}

@@ -1,8 +1,15 @@
 {
-  "name": "llamabot-local-lab",
-  "version": "2.0.0",
+  "name": "curiosity",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
-  "scripts": { "start": "node server.js", "test": "node --test" },
-  "engines": { "node": ">=20" }
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "draft": "node scripts/draft-fact.js",
+    "build": "node scripts/build.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
 }
