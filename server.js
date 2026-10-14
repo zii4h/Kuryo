@@ -8,13 +8,13 @@ const assets = new Map([
   ['/index.html', ['index.html','text/html']],
   ['/styles.css', ['styles.css','text/css']],
   ['/src/app.js', ['src/app.js','text/javascript']],
-  ['/src/library.js', ['src/library.js','text/javascript']],
-  ['/content/facts.json', ['content/facts.json','application/json']]
+  ['/src/discovery.js', ['src/discovery.js','text/javascript']]
+
 ]);
 export function createServer() {
   return http.createServer(async (request,response) => {
     response.setHeader('X-Content-Type-Options','nosniff');
-    response.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'");
+    response.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self' https://en.wikipedia.org; object-src 'none'; base-uri 'none'; frame-ancestors 'none'");
     if (!['GET','HEAD'].includes(request.method)) { response.writeHead(405,{Allow:'GET, HEAD'}); response.end(); return; }
     const pathname = new URL(request.url,'http://localhost').pathname;
     const asset = assets.get(pathname);
@@ -28,5 +28,5 @@ export function createServer() {
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const port = Number(process.env.PORT || 3000);
-  createServer().listen(port,'127.0.0.1',() => console.log(`Curiosity → http://127.0.0.1:${port}`));
+  createServer().listen(port,'127.0.0.1',() => console.log(`Curiosity â†’ http://127.0.0.1:${port}`));
 }

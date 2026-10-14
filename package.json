@@ -1,12 +1,11 @@
 {
   "name": "curiosity",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node server.js",
     "test": "node --test",
-    "draft": "node scripts/draft-fact.js",
     "build": "node scripts/build.js"
   },
   "engines": {

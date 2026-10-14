@@ -12,9 +12,9 @@
   <main class="curiosity" aria-label="Discover something interesting">
     <div class="workspace">
       <form id="curiosity-form" class="input-box" autocomplete="off">
-        <label for="topic" class="sr-only">Choose a trivia topic, or leave blank for a random fact</label>
-        <input id="topic" name="topic" type="text" maxlength="200" placeholder="Tell me something interesting about…" aria-describedby="input-help" enterkeyhint="go" spellcheck="false">
-        <span id="input-help" class="sr-only">Enter a topic and press Enter. Leave it blank or use Surprise me for a random fact from the published library.</span>
+        <label for="topic" class="sr-only">Choose any topic, or leave blank for a random discovery</label>
+        <input id="topic" name="topic" type="text" maxlength="200" placeholder="Tell me something interesting aboutâ€¦" aria-describedby="input-help" enterkeyhint="go" spellcheck="false">
+        <span id="input-help" class="sr-only">Enter a topic and press Enter. Leave it blank or use Surprise me for a random discovery from Wikipedia.</span>
         <button id="surprise" class="icon-button" type="button" title="Surprise me" aria-label="Surprise me with a random fact">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="8" cy="8" r=".8" fill="currentColor"/><circle cx="16" cy="8" r=".8" fill="currentColor"/><circle cx="12" cy="12" r=".8" fill="currentColor"/><circle cx="8" cy="16" r=".8" fill="currentColor"/><circle cx="16" cy="16" r=".8" fill="currentColor"/></svg>
         </button>
@@ -27,8 +27,8 @@
         <h1 id="fact-title"></h1>
         <p id="fact-text" class="fact-text"></p>
         <div id="result-footer" class="result-footer">
-          <a id="source" target="_blank" rel="noopener noreferrer"></a>
-          <button id="another" type="button">Another one <span aria-hidden="true">↗</span></button>
+          <div class="attribution"><a id="source" target="_blank" rel="noopener noreferrer"></a><a class="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></div>
+          <button id="another" type="button">Another one <span aria-hidden="true">â†—</span></button>
         </div>
         <div id="suggestions" class="suggestions" hidden></div>
       </section>

@@ -1,56 +1,56 @@
-import { createFactPicker, TOPICS } from './library.js';
+import { createDiscovery } from './discovery.js';
 const $ = id => document.getElementById(id);
-let picker, currentQuery = '', loading;
-async function loadLibrary() {
-  if (!loading) loading = fetch(new URL('../content/facts.json', import.meta.url))
-    .then(response => { if (!response.ok) throw new Error('Library unavailable'); return response.json(); })
-    .then(data => { picker = createFactPicker(data.facts); return picker; })
-    .catch(error => { loading = null; throw error; });
-  return loading;
-}
+const discovery = createDiscovery();
+let currentQuery = '', controller;
 function status(text) { $('status').textContent = text; $('status').hidden = !text; }
 function renderFact(fact) {
-  $('result-label').textContent = `Did you know? · ${fact.topic}`;
+  $('result-label').textContent = 'A detail worth knowing';
   $('fact-title').textContent = fact.title;
   $('fact-text').textContent = fact.text;
-  $('source').textContent = `Source: ${fact.source.publisher} ↗`;
+  $('source').textContent = 'From Wikipedia ↗';
   $('source').href = fact.source.url;
   $('source').title = fact.source.title;
   $('result-footer').hidden = false;
   $('suggestions').hidden = true;
   $('result').hidden = false;
 }
-function renderMissing() {
-  $('result-label').textContent = 'A little curiosity, a little patience';
-  $('fact-title').textContent = 'That topic isn’t in the library yet.';
-  $('fact-text').textContent = 'Try one of these topics, or roll the dice for a surprise.';
+function renderMissing(suggestion) {
+  $('result-label').textContent = 'Keep exploring';
+  $('fact-title').textContent = 'No matching article turned up.';
+  $('fact-text').textContent = 'Try a different spelling or a more specific topic. You can also roll the dice.';
   $('result-footer').hidden = true;
   $('suggestions').replaceChildren();
-  TOPICS.forEach(topic => {
-    const button = document.createElement('button'); button.type = 'button'; button.textContent = topic;
-    button.onclick = () => { $('topic').value = topic; discover(topic); };
+  if (suggestion) {
+    const button = document.createElement('button'); button.type = 'button'; button.textContent = `Try “${suggestion}”`;
+    button.onclick = () => { $('topic').value = suggestion; discover(suggestion); };
     $('suggestions').append(button);
-  });
-  $('suggestions').hidden = false;
+  }
+  $('suggestions').hidden = !suggestion;
   $('result').hidden = false;
 }
 async function discover(query = $('topic').value.trim()) {
-  if ($('discover').disabled) return;
+  controller?.abort();
+  const request = new AbortController(); controller = request;
   $('discover').disabled = true; $('surprise').disabled = true; $('another').disabled = true;
+  $('curiosity-form').setAttribute('aria-busy','true');
+  status(query ? 'Looking for an interesting detail…' : 'Following a random thread of curiosity…');
   try {
-    const library = await loadLibrary();
-    const result = library.pick(query);
+    const result = await discovery.discover(query,{signal:request.signal});
+    if (controller !== request) return;
     currentQuery = query;
-    if (result.fact) {
-      renderFact(result.fact);
-      status(result.repeated ? 'You’ve explored this selection. Rediscovering a fact from the published library.' : 'From the published fact library. No live AI generation.');
-    } else { renderMissing(); status(''); }
-  } catch {
-    status('The fact library couldn’t load. Check your connection and try again.');
-  } finally { $('discover').disabled = false; $('surprise').disabled = false; $('another').disabled = false; }
+    if (result.fact) { renderFact(result.fact); status(result.repeated ? 'You’ve seen the selected details from this article. Try another topic to keep exploring.' : ''); }
+    else { renderMissing(result.suggestion); status(''); }
+  } catch(error) {
+    if (request.signal.aborted || controller !== request) return;
+    status(error.name === 'TimeoutError' ? 'The source is taking too long. Please try again.' : error.message || 'Couldn’t reach the source. Please try again.');
+  } finally {
+    if (controller === request) {
+      controller = null;
+      $('discover').disabled = false; $('surprise').disabled = false; $('another').disabled = false;
+      $('curiosity-form').setAttribute('aria-busy','false');
+    }
+  }
 }
-$('curiosity-form').onsubmit = event => { event.preventDefault(); discover(); };
-$('surprise').onclick = () => { $('topic').value = ''; discover(''); };
+$('curiosity-form').onsubmit = event => { event.preventDefault(); return discover(); };
+$('surprise').onclick = () => { $('topic').value = ''; return discover(''); };
 $('another').onclick = () => discover(currentQuery);
-// Fetch only the small published library. No model download or runtime API.
-loadLibrary().catch(() => {});
