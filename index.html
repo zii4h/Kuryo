@@ -1,112 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Website</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- markdown renderer -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111c16">
+<title>LlamaBot / Local Intelligence Lab</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <nav class="navbar">
-    <div class="logo">MyBrand</div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </div>
-  </nav>
-
-  <div class="hero">
-    <h1>Dummy page</h1>
-    <p>Click the chat bubble at the bottom right. It's fully local.</p>
-  </div>
-
-  <!-- floating bubble button -->
-  <button id="cw-bubble-btn" title="Chat with us">
-    <div id="cw-badge"></div>
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 6a2 2 0 0 1 2-2h20a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H11l-7 4V6z" fill="#6c47ff"/>
-      <circle cx="10" cy="13" r="1.5" fill="white"/>
-      <circle cx="16" cy="13" r="1.5" fill="white"/>
-      <circle cx="22" cy="13" r="1.5" fill="white"/>
-    </svg>
-  </button>
-
-  <!-- chat panel -->
-  <div id="cw-panel">
-    <div id="cw-header">
-
-      <!-- bot avatar -->
-      <div class="cw-avatar">
-        <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="19" cy="19" r="19" fill="url(#av-grad)"/>
-          <!-- head -->
-          <rect x="11" y="9" width="16" height="13" rx="4" fill="white" opacity="0.92"/>
-          <!-- eyes -->
-          <circle cx="15.5" cy="15" r="2" fill="#6c47ff"/>
-          <circle cx="22.5" cy="15" r="2" fill="#6c47ff"/>
-          <!-- antenna -->
-          <line x1="19" y1="9" x2="19" y2="5" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-          <circle cx="19" cy="4.5" r="1.5" fill="white" opacity="0.7"/>
-          <!-- body -->
-          <rect x="13" y="23" width="12" height="7" rx="3" fill="white" opacity="0.7"/>
-          <defs>
-            <linearGradient id="av-grad" x1="0" y1="0" x2="38" y2="38" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#3f3175"/>
-              <stop offset="1" stop-color="#6f2ee7"/>
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
-      <div class="cw-header-info">
-        <p class="cw-header-name" id="cw-bot-name">Site Assistant</p>
-        <p class="cw-header-status">
-          <span class="cw-dot" id="cw-status-dot"></span>
-          <span id="cw-status-text">Connecting...</span>
-        </p>
-      </div>
-
-      <div class="cw-header-actions">
-        <button id="cw-clear" title="Clear chat">
-          <svg viewBox="0 0 24 24"><path d="M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
-        </button>
-        <button id="cw-close" title="Close">✕</button>
-      </div>
-    </div>
-
-    <div id="cw-messages">
-      <div class="cw-msg-wrap bot">
-        <div class="cw-msg bot" id="cw-welcome-msg">
-          👋 Hi! I'm here to help you navigate this site. What would you like to know?
-        </div>
-      </div>
-    </div>
-
-    <div id="cw-typing">
-      <span></span><span></span><span></span>
-    </div>
-
-    <div id="cw-quick-replies"></div>
-
-    <div id="cw-input-row">
-      <input id="cw-input" type="text" placeholder="Ask me anything..." autocomplete="off"/>
-      <button id="cw-send" title="Send">
-        <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
-      </button>
-    </div>
-
-    <div id="cw-powered">
-      Powered by <strong>Ollama</strong> · runs fully on your machine
-    </div>
-  </div>
-
-  <script src="src/config.js"></script>
-  <script src="src/app.js"></script>
-
+<aside class="sidebar">
+<a class="brand" href="/">
+<span class="brand-mark">L↗</span>
+<span>LlamaBot<small>LOCAL INTELLIGENCE LAB</small>
+</span>
+</a>
+<div class="nav-label">WORKSPACE</div>
+<button class="nav active" data-mode="grounded">▧ &nbsp; Document intelligence <small>01</small>
+</button>
+<button class="nav" data-mode="compare">⇄ &nbsp; Model arena <small>02</small>
+</button>
+<button class="nav" data-mode="chat">✳ &nbsp; Open conversation <small>03</small>
+</button>
+<div class="sidebar-note">
+<span class="eyebrow">BUILT TO BE LOCAL</span>
+<h3>Your machine.<br>Your intelligence.</h3>
+<p>Documents stay in this browser. Inference runs through your local Ollama runtime.</p>
+<div class="privacy-line">◈ &nbsp; No cloud inference</div>
+</div>
+<button id="export" class="nav export">↗ &nbsp; Export session</button>
+<div class="sidebar-footer">LLAMABOT <span>v2.0 / LAB</span>
+</div>
+</aside>
+<main>
+<header class="topbar">
+<span>Workspace <b>/</b> <span id="breadcrumb">Document intelligence</span>
+</span>
+<button id="refresh" class="connection">
+<i id="status-dot">
+</i>
+<span id="status">Checking runtime</span> ↻</button>
+</header>
+<section class="heading">
+<div>
+<div class="eyebrow">PRIVATE BY DESIGN. MEASURABLE BY DEFAULT.</div>
+<h1 id="title">Turn your documents<br>into <em>answers.</em>
+</h1>
+<p id="subtitle">Bring your own context. Get grounded answers. Inspect the evidence.</p>
+</div>
+<div class="heading-stamp">
+<span>LOCAL</span>
+<strong>AI</strong>
+<small>POWERED BY OLLAMA</small>
+</div>
+</section>
+<div id="notice" role="status" hidden>
+</div>
+<div class="workbench">
+<section class="conversation">
+<div class="panel-heading">
+<strong id="panel-title">▪ &nbsp; Document intelligence</strong>
+<button id="clear" class="text-button">New session ↗</button>
+</div>
+<div class="controls">
+<label>MODEL<select id="model" aria-label="Primary model">
+<option value="">Waiting for runtime…</option>
+</select>
+</label>
+<label id="second-model-wrap" hidden>CHALLENGER<select id="model-b" aria-label="Comparison model">
+</select>
+</label>
+<label>TEMPERATURE<select id="temperature">
+<option value="0.2">0.2 · precise</option>
+<option value="0.7">0.7 · creative</option>
+</select>
+</label>
+</div>
+<div id="messages" aria-live="polite">
+</div>
+<form id="composer">
+<label class="sr-only" for="prompt">Your question</label>
+<textarea id="prompt" rows="2" maxlength="12000" placeholder="Ask a question about your sources…">
+</textarea>
+<div class="composer-bottom">
+<span>↵ Send · Shift + Enter for a new line</span>
+<button id="stop" type="button" hidden>Stop ■</button>
+<button id="send" class="primary" type="submit">Ask locally ↑</button>
+</div>
+</form>
+<div class="fine-print">Selected excerpts go only to the local runtime. Model answers can be wrong; inspect sources.</div>
+</section>
+<aside class="inspector">
+<section class="source-panel">
+<div class="panel-heading">
+<strong>Source library</strong>
+<span id="source-count" class="count">0</span>
+</div>
+<p class="section-description">The context behind the answer.</p>
+<label class="upload" for="files">
+<span>＋</span>
+<strong>Add documents</strong>
+<small>.txt, .md, .csv, .json · up to 1 MB each</small>
+<input id="files" type="file" accept=".txt,.md,.csv,.json" multiple>
+</label>
+<div id="sources">
+</div>
+<details id="evidence">
+<summary>Retrieved excerpts <span id="retrieved-count">0</span>
+</summary>
+<div id="excerpts">
+</div>
+</details>
+</section>
+<section class="telemetry">
+<div class="panel-heading">
+<strong>Inference telemetry</strong>
+<span class="eyebrow">LIVE</span>
+</div>
+<div class="metric-grid">
+<div>
+<span id="speed">—</span>
+<small>TOKENS / SEC</small>
+</div>
+<div>
+<span id="first-token">—</span>
+<small>FIRST TOKEN / SEC</small>
+</div>
+<div>
+<span id="tokens">—</span>
+<small>OUTPUT TOKENS</small>
+</div>
+<div>
+<span id="duration">—</span>
+<small>TOTAL / SEC</small>
+</div>
+</div>
+<p id="telemetry-note">Real measurements appear after a run. No simulated scores.</p>
+</section>
+<section class="how-it-works">
+<span class="eyebrow">UNDER THE HOOD</span>
+<h3>Small stack. Real work.</h3>
+<p>01 &nbsp; Retrieve relevant text locally<br>02 &nbsp; Stream from an installed model<br>03 &nbsp; Inspect sources and runtime stats</p>
+<a href="https://docs.ollama.com" target="_blank" rel="noreferrer">Ollama documentation ↗</a>
+</section>
+</aside>
+</div>
+<footer>MADE FOR CURIOUS MINDS <span>LOCAL HOST / LOCAL MODELS / YOUR DATA</span>
+</footer>
+</main>
+<script type="module" src="src/app.js">
+</script>
 </body>
 </html>

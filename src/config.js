@@ -1,25 +1,17 @@
-const CONFIG = {
+﻿export const CONFIG = { maxTokens: 768, historyMessages: 12, maxFileBytes: 1048576, maxSources: 12 };
+export const SAMPLE = { name: 'Northstar · launch brief.md', text: `NORTHSTAR — INTERNAL LAUNCH BRIEF
 
-  ollamaBaseUrl: "http://localhost:11434",
+Overview
+Northstar is a fictional offline field-notes app for research teams. The pilot launches on November 18, 2026 for 40 researchers across two teams. The total pilot budget is PHP 180,000: PHP 100,000 for engineering, PHP 50,000 for devices, and PHP 30,000 for training.
 
-  model: "llama3.2",
+Launch blockers
+Offline sync can duplicate notes after reconnecting. Engineering lead Maya owns the fix, due November 6. Device encryption has not passed security review. Security lead Rafael owns the review, due November 9. The onboarding guide is missing screenshots. Operations lead Bea owns the guide, due November 12. All three blockers must be resolved before the pilot.
 
-  siteName: "MyBrand",
-  botName: "Site Assistant",
-  maxHistoryMessages: 10,
-  maxTokens: 300,
+Success criteria
+At least 90% of pilot participants must finish onboarding without help. No notes may be lost during offline sync testing. The team will measure weekly active usage and interview ten researchers after two weeks.
 
-  quickReplies: [
-    { label: "What can I do here?",  text: "What can I do on this site?" },
-    { label: "Get started",          text: "How do I get started?" },
-    { label: "Contact support",      text: "How do I contact support?" },
-  ],
+Scope and decisions
+The pilot supports plain-text notes and tags. Photo attachments and cloud backup are explicitly out of scope. Notes stay on assigned devices. The team will decide whether to expand after the December 2 review. Pricing and public release dates have not been decided.
 
-systemPrompt: `You are a chat assistant embedded in a demo page. This is just a test site with no real content, services, or resources.
-
-Your rules:
-- If asked anything about the site, say: This is just a demo page, there's nothing here yet.
-- Do not suggest resources, links, or services you don't actually know about
-- Never make anything up
-- Keep replies short — 2 sentences max`,
-};
+Risk
+If security review slips past November 9, the launch date must be reconsidered. The team will not bypass encryption review to meet the target date.` };
