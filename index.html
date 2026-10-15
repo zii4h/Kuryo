@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f5f1">
+  <meta name="theme-color" content="#171a17">
   <meta name="description" content="A small doorway to something interesting. Pick a topic or let curiosity choose a sourced fact for you.">
   <title>Curiosity</title>
   <link rel="stylesheet" href="styles.css">
@@ -23,12 +23,10 @@
         </button>
       </form>
       <section id="result" class="result" aria-live="polite" aria-atomic="true" hidden>
-        <p id="result-label" class="result-label"></p>
         <h1 id="fact-title"></h1>
         <p id="fact-text" class="fact-text"></p>
         <div id="result-footer" class="result-footer">
-          <div class="attribution"><a id="source" target="_blank" rel="noopener noreferrer"></a><a class="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></div>
-          <button id="another" type="button">Another one <span aria-hidden="true">â†—</span></button>
+          <div class="attribution"><a id="source" target="_blank" rel="noopener noreferrer">From Wikipedia <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3 10 14"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a><a class="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></div>
         </div>
         <div id="suggestions" class="suggestions" hidden></div>
       </section>
